@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="default.css">
+	<link rel="stylesheet" href="reveal.min.css">
+	<style>
+	* {
+		margin: 0;
+		padding: 0;
+	}
+	body {
+		background: #b3d9e1;
+		overflow: hidden;
+	}
+	.erb-image-wrapper{
+		max-width:100%;
+		height:auto;
+		position: absolute;
+		display:block;
+		width: 100%;
+		top: 50%;
+		-webkit-transform: translateY(-50%);
+		-ms-transform: translateY(-50%);
+		transform: translateY(-50%);
+		overflow: hidden;
+		margin:0 auto;
+	}
+	.erb-image-wrapper img{
+		width: 100%;
+		height: auto;
+		display:block;
+		margin: 0 auto;
+	}
+	.reveal img {
+		max-width: none;
+		max-height: none;
+	}
+	.menu {
+		width: 100px;
+		height: 100px;
+		position: absolute;
+		top: -510px;
+		z-index: 999;
+		margin-top: 50%!important;
+		left: 10px;
+		cursor: pointer;
+	}
+	</style>
+
+	<script src="reveal.min.js"></script>
+</head>
+<body>
+	<div class="reveal">
+		<div class="slides">
+			<section>
+				<div class="erb-image-wrapper">
+					<img src="BLUEBAY_01.jpg" alt="">
+				</div>
+			</section>
+			<section>
+				<div class="erb-image-wrapper">
+					<div class="menu"></div>
+					<img src="BLUEBAY_02.jpg" alt="">
+				</div>
+			</section>			
+			<section>
+				<div class="erb-image-wrapper">
+					<img src="BLUEBAY_03.jpg" alt="">
+				</div>
+			</section>
+			<section>
+				<div class="erb-image-wrapper">
+					<img src="BLUEBAY_04.jpg" alt="">
+				</div>
+			</section>
+			<section>
+				<div class="erb-image-wrapper">
+					<img src="BLUEBAY_05.jpg" alt="">
+				</div>
+			</section>
+			<section>
+				<div class="erb-image-wrapper">
+					<img src="BLUEBAY_06.jpg" alt="">
+				</div>
+			</section>
+			<section>
+				<div class="erb-image-wrapper">
+					<img src="BLUEBAY_07.jpg" alt="">
+				</div>
+			</section>
+
+		</div>
+	</div>
+	
+	<script>
+	Reveal.initialize({
+
+    // Display controls in the bottom right corner
+    controls: false,
+
+    // Display a presentation progress bar
+    progress: true,
+    
+    width:"100%",
+    height:"100%",
+    margin:0,
+
+    // Display the page number of the current slide
+    slideNumber: false,
+
+    // Push each slide change to the browser history
+    history: false,
+
+    // Enable keyboard shortcuts for navigation
+    keyboard: true,
+
+    // Enable the slide overview mode
+    overview: true,
+
+    // Vertical centering of slides
+    center: true,
+
+    // Enables touch navigation on devices with touch input
+    touch: true,
+
+    // Loop the presentation
+    loop: false,
+
+    // Change the presentation direction to be RTL
+    rtl: false,
+
+    // Turns fragments on and off globally
+    fragments: true,
+
+    // Flags if the presentation is running in an embedded mode,
+    // i.e. contained within a limited portion of the screen
+    embedded: false,
+
+    // Number of milliseconds between automatically proceeding to the
+    // next slide, disabled when set to 0, this value can be overwritten
+    // by using a data-autoslide attribute on your slides
+    autoSlide: 0,
+
+    // Stop auto-sliding after user input
+    autoSlideStoppable: true,
+
+    // Enable slide navigation via mouse wheel
+    mouseWheel: true,
+
+    // Hides the address bar on mobile devices
+    hideAddressBar: true,
+
+    // Opens links in an iframe preview overlay
+    previewLinks: false,
+
+    // Transition style
+    transition: 'fade', // default/cube/page/concave/zoom/linear/fade/none
+
+    // Transition speed
+    transitionSpeed: 'default', // default/fast/slow
+
+    // Transition style for full page slide backgrounds
+    backgroundTransition: 'default', // default/none/slide/concave/convex/zoom
+
+    // Number of slides away from the current that are visible
+    viewDistance: 3,
+
+    // Parallax background image
+    parallaxBackgroundImage: '', // e.g. "'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg'"
+
+    // Parallax background size
+    parallaxBackgroundSize: '' // CSS syntax, e.g. "2100px 900px"
+
+
+});
+</script>
+</body>
+</html>

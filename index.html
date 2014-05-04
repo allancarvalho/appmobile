@@ -3,8 +3,8 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Document</title>
-	<link rel="stylesheet" href="default.css">
-	<link rel="stylesheet" href="reveal.min.css">
+	<link rel="stylesheet" href="css/default.css">
+	<link rel="stylesheet" href="css/reveal.min.css">
 	<style>
 	* {
 		margin: 0;
@@ -12,30 +12,17 @@
 	}
 	body {
 		background: #b3d9e1;
-		overflow: hidden;
 	}
 	.erb-image-wrapper{
-		max-width:100%;
-		height:auto;
-		position: absolute;
-		display:block;
-		width: 100%;
-		top: 50%;
-		-webkit-transform: translateY(-50%);
-		-ms-transform: translateY(-50%);
-		transform: translateY(-50%);
-		overflow: hidden;
-		margin:0 auto;
+		height: 100%;
+		box-sizing: border-box;
+		text-align: center;
+		position: relative;
+		display: inline-block;
 	}
 	.erb-image-wrapper img{
-		width: 100%;
-		height: auto;
-		display:block;
-		margin: 0 auto;
-	}
-	.reveal img {
-		max-width: none;
-		max-height: none;
+		max-height:100%;
+		max-width: 100%;
 	}
 	.menu {
 		width: 100px;
@@ -47,53 +34,61 @@
 		left: 10px;
 		cursor: pointer;
 	}
+	.slide1 .logo{
+		position: absolute;
+		top: 50%;
+		margin-left: -32.5%;
+		margin-top: -110px;
+		left: 50%;
+		width: 65%;
+	}
 	</style>
 
-	<script src="reveal.min.js"></script>
+	<script src="js/reveal.min.js"></script>
 </head>
 <body>
 	<div class="reveal">
 		<div class="slides">
 			<section>
-				<div class="erb-image-wrapper">
-					<img src="BLUEBAY_01.jpg" alt="">
+				<div class="erb-image-wrapper slide1">
+					<img src="img/slide1/bg.png" alt="">
+					<img src="img/slide1/logo.png" class="fragment logo">
 				</div>
 			</section>
 			<section>
 				<div class="erb-image-wrapper">
 					<div class="menu"></div>
-					<img src="BLUEBAY_02.jpg" alt="">
+					<img src="img/BLUEBAY_02.jpg" alt="">
 				</div>
 			</section>			
 			<section>
 				<div class="erb-image-wrapper">
-					<img src="BLUEBAY_03.jpg" alt="">
+					<img src="img/BLUEBAY_03.jpg" alt="">
 				</div>
 			</section>
 			<section>
 				<div class="erb-image-wrapper">
-					<img src="BLUEBAY_04.jpg" alt="">
+					<img src="img/BLUEBAY_04.jpg" alt="">
 				</div>
 			</section>
 			<section>
 				<div class="erb-image-wrapper">
-					<img src="BLUEBAY_05.jpg" alt="">
+					<img src="img/BLUEBAY_05.jpg" alt="">
 				</div>
 			</section>
 			<section>
 				<div class="erb-image-wrapper">
-					<img src="BLUEBAY_06.jpg" alt="">
+					<img src="img/BLUEBAY_06.jpg" alt="">
 				</div>
 			</section>
 			<section>
 				<div class="erb-image-wrapper">
-					<img src="BLUEBAY_07.jpg" alt="">
+					<img src="img/BLUEBAY_07.jpg" alt="">
 				</div>
 			</section>
 
 		</div>
 	</div>
-	
 	<script>
 	Reveal.initialize({
 
@@ -106,6 +101,7 @@
     width:"100%",
     height:"100%",
     margin:0,
+    padding:0,
 
     // Display the page number of the current slide
     slideNumber: false,
@@ -120,7 +116,7 @@
     overview: true,
 
     // Vertical centering of slides
-    center: true,
+    center: false,
 
     // Enables touch navigation on devices with touch input
     touch: true,
@@ -156,7 +152,7 @@
     previewLinks: false,
 
     // Transition style
-    transition: 'fade', // default/cube/page/concave/zoom/linear/fade/none
+    transition: 'linear', // default/cube/page/concave/zoom/linear/fade/none
 
     // Transition speed
     transitionSpeed: 'default', // default/fast/slow

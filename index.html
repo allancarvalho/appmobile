@@ -19,6 +19,7 @@
 		text-align: center;
 		position: relative;
 		display: inline-block;
+		overflow: hidden;
 	}
 	.erb-image-wrapper img{
 		max-height:100%;
@@ -37,11 +38,91 @@
 	.slide1 .logo{
 		position: absolute;
 		top: 50%;
+		-webkit-transform: translateY(-50%);
 		margin-left: -32.5%;
-		margin-top: -110px;
 		left: 50%;
 		width: 65%;
 	}
+	.animate-rounded {
+		position: absolute;
+		right: 30px;
+		width: 50px;
+		height: 50px;
+		background: #1e75bb;
+		z-index: 99;
+		border-radius: 50px;
+		
+	}
+	.ar1 {
+		-webkit-animation: ball_opacity_animate 120s infinite;
+	}
+	.ar2 {
+		-webkit-animation: ball_opacity_animate2 60s infinite;
+		margin-top: 30%!important;
+		margin-right: 50%!important;
+		-webkit-transform: scale(2);
+	}
+	.ar3 {
+		-webkit-animation: ball_opacity_animate3 60s infinite;
+		margin-bottom: 20%!important;
+		margin-left: 20%!important;
+		-webkit-transform: scale(2);
+	}
+	@-webkit-keyframes ball_opacity_animate {
+		0%   { 
+			opacity: 0.1;
+			top: 20%; 
+			right: 30px;
+		}
+		50%   { 
+			opacity: 0.4; 
+			top: 60%; 
+			right: 120px;
+		}
+		100% { 
+			top: 80%; 
+			right: 120px;
+			opacity: 0; 
+		}
+	}	
+	@-webkit-keyframes ball_opacity_animate2 {
+		0%   { 
+			opacity: 0.1;
+			bottom: 20%; 
+			left: 30px;
+		}
+		20% {
+			opacity: 0.2
+		}
+		50%   { 
+			opacity: 0.1; 
+			bottom: 60%; 
+			left: 120px;
+		}
+		100% { 
+			bottom: 80%; 
+			left: 120px;
+			opacity: 0; 
+		}
+	}
+	@-webkit-keyframes ball_opacity_animate3 {
+		0%   { 
+			opacity: 0.1;
+			bottom: 40%; 
+			left: 30px;
+		}
+		50%   { 
+			opacity: 0.15; 
+			bottom: 50%; 
+			left: 220px;
+		}
+		100% { 
+			bottom: 60%; 
+			left: 120px;
+			opacity: 0; 
+		}
+	}
+
 	</style>
 
 	<script src="js/reveal.min.js"></script>
@@ -58,6 +139,9 @@
 			<section>
 				<div class="erb-image-wrapper">
 					<div class="menu"></div>
+					<div class="animate-rounded ar1"></div>
+					<div class="animate-rounded ar2"></div>
+					<div class="animate-rounded ar3"></div>
 					<img src="img/BLUEBAY_02.jpg" alt="">
 				</div>
 			</section>			
@@ -107,7 +191,7 @@
     slideNumber: false,
 
     // Push each slide change to the browser history
-    history: false,
+    history: true,
 
     // Enable keyboard shortcuts for navigation
     keyboard: true,
@@ -152,7 +236,7 @@
     previewLinks: false,
 
     // Transition style
-    transition: 'linear', // default/cube/page/concave/zoom/linear/fade/none
+    transition: 'fade', // default/cube/page/concave/zoom/linear/fade/none
 
     // Transition speed
     transitionSpeed: 'default', // default/fast/slow

@@ -1,9 +1,9 @@
 <widget xmlns     = "http://www.w3.org/ns/widgets"
         xmlns:gap = "http://phonegap.com/ns/1.0"
-        id        = "com.ideais.PesquisaMercado"
+        id        = "com.ideais.TestHelloWorld"
         version   = "1.0.0">
 
-    <name>Apresentação Blue Bay</name>
+    <name>Teste APP</name>
 
     <description>
         Hello World sample application that responds to the deviceready event.
